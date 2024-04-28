@@ -4,6 +4,15 @@ Useful links for tech and non tech
 # JAVA
 Exception in thread "main" java.lang.UnsupportedClassVersionError: org/springframework/boot/SpringApplication has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 59.0
 
+Resolution: 
+https://stackoverflow.com/questions/12252123/build-path-entry-is-missing-error-when-trying-to-create-a-new-project-in-eclip
+1) I have installed jdk 22 on my machine and then changed JAVA_HOME and Path %JAVA_HOME%/bin variable
+2) Added new JRE in eclipse Window>>Preferences>>Java>>Installed JRES .. Remove old JRE
+3) Now right click Project>>Java Build Path>>Libraries>> Edit the existing JRE to Installed JRE
+4) mvn clean install
+   
+
+
 https://www.baeldung.com/java-lang-unsupportedclassversion
  major version numbers map to Java versions:
 
