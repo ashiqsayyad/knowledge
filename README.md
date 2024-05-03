@@ -52,4 +52,60 @@ https://www.baeldung.com/java-lang-unsupportedclassversion
 \i    to import back up into connected DB
 \dn to show schemas
 
+# Kubernetes K8s 
+# Minikube
+https://minikube.sigs.k8s.io/docs/tutorials/multi_node/
+
+minikube start --nodes 3 -p multinode-demo --cni calico
+
+PS C:\Users\Lenovo> minikube status -p multinode-demo
+multinode-demo
+type: Control Plane
+host: Running
+kubelet: Running
+apiserver: Running
+kubeconfig: Configured
+
+multinode-demo-m02
+type: Worker
+host: Running
+kubelet: Running
+
+multinode-demo-m03
+type: Worker
+host: Running
+kubelet: Running
+
+
+
+==========================================================================================
+PS C:\Users\Lenovo> minikube start --nodes 3 -p multinode-demo --cni calico
+W0504 00:04:40.579822   16316 main.go:291] Unable to resolve the current Docker CLI context "default": context "default": context not found: open C:\Users\Lenovo\.docker\contexts\meta\37a8eec1ce19687d132fe29051dca629d164e2c4958ba141d5f4133a33f0688f\meta.json: The system cannot find the path specified.
+* minikube v1.33.0 on Microsoft Windows 11 Home Single Language 10.0.22631.3447 Build 22631.3447
+* Kubernetes 1.30.0 is now available. If you would like to upgrade, specify: --kubernetes-version=v1.30.0
+* Using the docker driver based on existing profile
+! You cannot change the number of nodes for an existing minikube cluster. Please use 'minikube node add' to add nodes to an existing cluster.
+* Starting "minikube" primary control-plane node in "minikube" cluster
+* Pulling base image v0.0.43 ...
+* Restarting existing docker container for "minikube" ...
+* Preparing Kubernetes v1.25.2 on Docker 20.10.18 ...
+! kubeadm certificates have expired. Generating new ones...
+Bad local forwarding specification '0:localhost:8443'
+* Configuring Calico (Container Networking Interface) ...
+* Verifying Kubernetes components...
+  - Using image gcr.io/k8s-minikube/storage-provisioner:v5
+* Enabled addons: storage-provisioner, default-storageclass
+
+! C:\Program Files\Docker\Docker\resources\bin\kubectl.exe is version 1.29.1, which may have incompatibilities with Kubernetes 1.25.2.
+  - Want kubectl v1.25.2? Try 'minikube kubectl -- get pods -A'
+* Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+* =========================================================================================================================================
+# For Resolution of ISSUE >> Unable to resolve the current Docker CLI context "default": context "default": context not found: open C:\Users\Lenovo\.docker\contexts\meta\37a8eec1ce19687d132fe29051dca629d164e2c4958ba141d5f4133a33f0688f\meta.json: The system cannot find the path specified.
+
+PS C:\Users\Lenovo> docker context show
+default
+PS C:\Users\Lenovo> docker context use default
+default
+Current context is now "default"
+=======================================================================================================================================================
 
