@@ -42,9 +42,14 @@ https://www.baeldung.com/java-lang-unsupportedclassversion
 
 # POSTGRESQL
 \c "employees"     to switch to employees DB
+
 \l    to show all databases in server
+
 \dt to show all tables/relation for a connected database
+
 \d "employees"    to show view/schema for a table employees
+
 \i    to import back up into connected DB
+\dn to show schemas
 
 
