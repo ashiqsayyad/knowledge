@@ -59,6 +59,7 @@ https://minikube.sigs.k8s.io/docs/tutorials/multi_node/
 minikube start --nodes 3 -p multinode-demo --cni calico
 
 PS C:\Users\Lenovo> minikube status -p multinode-demo
+
 multinode-demo
 type: Control Plane
 host: Running
@@ -100,12 +101,13 @@ Bad local forwarding specification '0:localhost:8443'
   - Want kubectl v1.25.2? Try 'minikube kubectl -- get pods -A'
 * Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
 * =========================================================================================================================================
-# For Resolution of ISSUE >> Unable to resolve the current Docker CLI context "default": context "default": context not found: open C:\Users\Lenovo\.docker\contexts\meta\37a8eec1ce19687d132fe29051dca629d164e2c4958ba141d5f4133a33f0688f\meta.json: The system cannot find the path specified.
+# For Resolution of ISSUE
+>> Unable to resolve the current Docker CLI context "default": context "default": context not found: open C:\Users\Lenovo\.docker\contexts\meta\37a8eec1ce19687d132fe29051dca629d164e2c4958ba141d5f4133a33f0688f\meta.json: The system cannot find the path specified.
 
 PS C:\Users\Lenovo> docker context show
 default
 PS C:\Users\Lenovo> docker context use default
 default
 Current context is now "default"
-=======================================================================================================================================================
+======================================================================================================================================================
 
