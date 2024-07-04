@@ -39,6 +39,12 @@ https://www.baeldung.com/java-lang-unsupportedclassversion
 65 = Java 21
 66 = Java 22
 
+#AWS
+
+EFS article :
+https://aws.amazon.com/blogs/storage/persistent-storage-for-kubernetes/
+
+
 
 # POSTGRESQL
 \c "employees"     to switch to employees DB
