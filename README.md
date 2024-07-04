@@ -1,4 +1,4 @@
-# knowledge
+# Knowledge
 Useful links for tech and non tech
 
 # JAVA
@@ -39,7 +39,7 @@ https://www.baeldung.com/java-lang-unsupportedclassversion
 65 = Java 21
 66 = Java 22
 
-#AWS
+# AWS
 
 EFS article :
 https://aws.amazon.com/blogs/storage/persistent-storage-for-kubernetes/
