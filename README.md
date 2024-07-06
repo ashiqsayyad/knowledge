@@ -43,6 +43,7 @@ https://www.baeldung.com/java-lang-unsupportedclassversion
 
 EFS article :
 https://aws.amazon.com/blogs/storage/persistent-storage-for-kubernetes/
+
 EFS is the remote File system. EFS follows NFS protocol(NFSv4.1 & 4.0) for connection. EFS can be mounted on local directory in any machine for example EC2 machines. Once EFS is mounted, then the files created in the local directory will be synced to EFS volume.
 IMP Terms : EFS is elastic(grow and shrink automatically) , serverless fully managed service(avoid complexity of deploying,patching & maintaining complex file system configurations) ,highly durable , scalable(can grow in size to petabytes) and highly available
 IMP Settings:
@@ -59,6 +60,15 @@ Performace Mode :
 General Purpose recommended as has lowest latencty per read/write operation
 others are MAX I/O Mode
 
+# LINUX
+ sudo su >> sudo will give superprevilages to current user and su will switch user to root
+ su ssm-user >> switch user to ssm-user
+ / is the root dir
+ cat /etc/passwd will display all linux users
+ 777  >> how 7   r w x  >> 1 1 1 = 4+2+1 =7
+ first 7 is for user which has rwx. second 7 is for group which has rwx  and last 7 is for world which has rwx
+ 750 >> Uer has rwx . Group has rx and world has nothing
+ 
 
 
 # POSTGRESQL
