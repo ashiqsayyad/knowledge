@@ -43,6 +43,21 @@ https://www.baeldung.com/java-lang-unsupportedclassversion
 
 EFS article :
 https://aws.amazon.com/blogs/storage/persistent-storage-for-kubernetes/
+EFS is the remote File system. EFS follows NFS protocol(NFSv4.1 & 4.0) for connection. EFS can be mounted on local directory in any machine for example EC2 machines. Once EFS is mounted, then the files created in the local directory will be synced to EFS volume.
+IMP Terms : EFS is elastic(grow and shrink automatically) , serverless fully managed service(avoid complexity of deploying,patching & maintaining complex file system configurations) ,highly durable , scalable(can grow in size to petabytes) and highly available
+IMP Settings:
+Availability Zone : 
+Regional :store data redundantly across AZ in same region. Recommended setting for prodcution like use cases
+One 
+: store data in single zone 
+
+Throuhput Mode :( spped bytes /sec for transafer)
+Elastic : AWS will manage throughput as per workload need 
+Others are Provisioned and Bursting
+
+Performace Mode :
+General Purpose recommended as has lowest latencty per read/write operation
+others are MAX I/O Mode
 
 
 
