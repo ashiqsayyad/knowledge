@@ -62,11 +62,17 @@ others are MAX I/O Mode
 
 # LINUX
  sudo su >> sudo will give superprevilages to current user and su will switch user to root
+ 
  su ssm-user >> switch user to ssm-user
+ 
  / is the root dir
+ 
  cat /etc/passwd will display all linux users
+ 
  777  >> how 7   r w x  >> 1 1 1 = 4+2+1 =7
+ 
  first 7 is for user which has rwx. second 7 is for group which has rwx  and last 7 is for world which has rwx
+ 
  750 >> Uer has rwx . Group has rx and world has nothing
  
 
