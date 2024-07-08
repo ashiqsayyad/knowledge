@@ -60,6 +60,30 @@ Performace Mode :
 General Purpose recommended as has lowest latencty per read/write operation
 others are MAX I/O Mode
 
+# HELM 
+
+where helm charts files are stored locally after helm repo add   : https://stackoverflow.com/questions/62924278/where-are-helm-charts-stored-locally : https://helm.sh/docs/helm/helm/
+
+do helm env .. it will show all directories
+
+HELM_BIN="helm"
+HELM_CACHE_HOME="/Users/username/Library/Caches/helm"
+HELM_CONFIG_HOME="/Users/username/Library/Preferences/helm"
+HELM_DATA_HOME="/Users/username/Library/helm"
+HELM_DEBUG="false"
+HELM_KUBEAPISERVER=""
+HELM_KUBEASGROUPS=""
+HELM_KUBEASUSER=""
+HELM_KUBECAFILE=""
+HELM_KUBECONTEXT=""
+HELM_KUBETOKEN=""
+HELM_MAX_HISTORY="10"
+HELM_NAMESPACE="default"
+HELM_PLUGINS="/Users/username/Library/helm/plugins"
+HELM_REGISTRY_CONFIG="/Users/username/Library/Preferences/helm/registry.json"
+HELM_REPOSITORY_CACHE="/Users/username/Library/Caches/helm/repository"
+HELM_REPOSITORY_CONFIG="/Users/username/Library/Preferences/helm/repositories.yaml"
+
 # LINUX
  sudo su >> sudo will give superprevilages to current user and su will switch user to root
  
