@@ -58,7 +58,18 @@ Others are Provisioned and Bursting
 
 Performace Mode :
 General Purpose recommended as has lowest latencty per read/write operation
-others are MAX I/O Mode
+others are MAX I/O Modeh
+
+# SHARING EFS to MULTIPLE Applcations via ACCESS Points
+1) Each application will create its own access point giving different "Root directory path"
+   
+   For example, app 1 will have accesspint app1accpoint with root dir path as /data/app1
+   
+   For example, app 2 will have accesspint app2accpoint with root dir path as /data/app2
+
+    So remote server hosting EFS will have two dirs app1 and app2 for two applications
+   
+   
 
 # HELM 
 
