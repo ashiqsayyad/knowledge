@@ -61,7 +61,7 @@ General Purpose recommended as has lowest latencty per read/write operation
 others are MAX I/O Modeh
 
 # SHARING EFS to MULTIPLE Applcations via ACCESS Points
-1) Each application will create its own access point giving different "Root directory path"
+1) Each application will create its own access point giving different "Root directory path". Root directory path is mandatory to give . Rest params like USER ID, GROUP ID ,Owner USER ID, OWNER Group ID,Acess point permissions(0755), you can give like 1000, 1000 for all feilds . If you dont give USER ID, GROUP ID ,Owner USER ID, OWNER Group ID, then you will get "Access denied by Server while mounting 127.0.0.1 error" while mounting access point on second machine. Seconday group IDs can be optional
    
    For example, app 1 will have accesspint app1accpoint with root dir path as /data/app1
    
