@@ -118,6 +118,12 @@ root@7174e15d8f54:/# **id**
 
 uid=0(root) gid=0(root) groups=0(root)
 
+root@7174e15d8f54:/usr/sbin# **find** / -type f -name "*.html"
+
+/usr/share/nginx/html/50x.html
+
+/usr/share/nginx/html/index.html
+
 
 # POSTGRESQL
 \c "employees"     to switch to employees DB
