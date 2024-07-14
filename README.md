@@ -109,7 +109,11 @@ HELM_REPOSITORY_CONFIG="/Users/username/Library/Preferences/helm/repositories.ya
  first 7 is for user which has rwx. second 7 is for group which has rwx  and last 7 is for world which has rwx
  
  750 >> Uer has rwx . Group has rx and world has nothing
- 
+
+ root@7174e15d8f54:/# **whoami**
+root
+root@7174e15d8f54:/# **id**
+uid=0(root) gid=0(root) groups=0(root)
 
 
 # POSTGRESQL
