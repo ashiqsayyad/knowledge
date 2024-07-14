@@ -111,8 +111,11 @@ HELM_REPOSITORY_CONFIG="/Users/username/Library/Preferences/helm/repositories.ya
  750 >> Uer has rwx . Group has rx and world has nothing
 
  root@7174e15d8f54:/# **whoami**
+ 
 root
+
 root@7174e15d8f54:/# **id**
+
 uid=0(root) gid=0(root) groups=0(root)
 
 
