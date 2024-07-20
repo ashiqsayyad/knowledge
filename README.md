@@ -137,6 +137,16 @@ root@7174e15d8f54:/usr/sbin# **find** / -type f -name "*.html"
 \i    to import back up into connected DB
 \dn to show schemas
 
+**BY default, indexes are created for primary key and unique values**
+employees=#  Select * from pg_indexes where tablename = 'employees';
+ schemaname | tablename |          indexname           | tablespace |                                           indexdef
+
+------------+-----------+------------------------------+------------+----------------------------------------------------------------------------------------------
+ public     | employees | employees_pkey               |            | CREATE UNIQUE INDEX employees_pkey ON public.employees USING btree (empid)
+ public     | employees | uk_j9xgmd0ya5jmus09o0b8pqrpb |            | CREATE UNIQUE INDEX uk_j9xgmd0ya5jmus09o0b8pqrpb ON public.employees USING btree (email)
+ public     | employees | uk_968bmvh68d9mn4n1tomcml6d8 |            | CREATE UNIQUE INDEX uk_968bmvh68d9mn4n1tomcml6d8 ON public.employees USING btree (mobile_no)
+(3 rows)
+
 # Kubernetes K8s 
 # Minikube
 https://minikube.sigs.k8s.io/docs/tutorials/multi_node/
