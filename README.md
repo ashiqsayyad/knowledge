@@ -147,6 +147,12 @@ employees=#  Select * from pg_indexes where tablename = 'employees';
  public     | employees | uk_968bmvh68d9mn4n1tomcml6d8 |            | CREATE UNIQUE INDEX uk_968bmvh68d9mn4n1tomcml6d8 ON public.employees USING btree (mobile_no)
 (3 rows)
 
+CREATE UNIQUE INDEX idx_first_name ON public.employees USING btree (first_name);
+DROP INDEX idx_first_name;
+
+To know indepth about index, refer https://github.com/ashiqsayyad/employeesystem/blob/main/README.md
+
+
 # Kubernetes K8s 
 # Minikube
 https://minikube.sigs.k8s.io/docs/tutorials/multi_node/
