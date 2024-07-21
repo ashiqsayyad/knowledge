@@ -68,6 +68,10 @@ others are MAX I/O Modeh
    For example, app 2 will have accesspint app2accpoint with root dir path as /data/app2
 
     So remote server hosting EFS will have two dirs app1 and app2 for two applications
+
+# Load balancer 
+ 1) Route 53 >> A record pointing to Application LB in public subnets with internet facing scheme >> EC2 machines in private subnets >> Works perfectly fine
+ 2) Route 53 >> A record pointing Application LB with internal scheme >>> It wont work as internal LB wont have publically resolvable ip
    
    
 
