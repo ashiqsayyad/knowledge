@@ -143,6 +143,7 @@ root@7174e15d8f54:/usr/sbin# **find** / -type f -name "*.html"
 
 **BY default, indexes are created for primary key and unique values**
 employees=#  Select * from pg_indexes where tablename = 'employees';
+
  schemaname | tablename |          indexname           | tablespace |                                           indexdef
 
 ------------+-----------+------------------------------+------------+----------------------------------------------------------------------------------------------
@@ -152,6 +153,7 @@ employees=#  Select * from pg_indexes where tablename = 'employees';
 (3 rows)
 
 CREATE UNIQUE INDEX idx_first_name ON public.employees USING btree (first_name);
+
 DROP INDEX idx_first_name;
 
 To know indepth about index, refer https://github.com/ashiqsayyad/employeesystem/blob/main/README.md
