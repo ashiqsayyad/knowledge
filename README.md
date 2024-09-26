@@ -56,9 +56,11 @@ echo " Welcome to nginx $(whoami) $(hostnamme)" > /var/www/html/index.html
 **Custom data & cloud init**
 
 you can automate above steps while creating Azure VM
+
 While creating VM, go to **Advanced** and paste below script in Custom data box
 
 #!/bin/sh
+
 sudo su
 
 apt-get -y update
