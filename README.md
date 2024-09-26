@@ -39,6 +39,18 @@ https://www.baeldung.com/java-lang-unsupportedclassversion
 65 = Java 21
 66 = Java 22
 
+#AZURE
+
+Install NGINX on Azure Linux VM
+sudo su
+
+apt-get -y update
+
+apt-get -y install nginx
+
+echo " Welcome to nginx $(whoami) $(hostnamme)" > /var/www/html/index.html
+ Go to browser and hit http://<public ip of VM> . It will display above message
+
 # AWS
 
 EFS article :
