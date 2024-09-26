@@ -41,7 +41,8 @@ https://www.baeldung.com/java-lang-unsupportedclassversion
 
 # AZURE
 
-Install NGINX on Azure Linux VM
+**Install NGINX on Azure Linux VM**
+
 sudo su
 
 apt-get -y update
