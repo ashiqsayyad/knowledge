@@ -39,7 +39,7 @@ https://www.baeldung.com/java-lang-unsupportedclassversion
 65 = Java 21
 66 = Java 22
 
-#AZURE
+# AZURE
 
 Install NGINX on Azure Linux VM
 sudo su
