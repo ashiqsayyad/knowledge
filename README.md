@@ -41,6 +41,14 @@ https://www.baeldung.com/java-lang-unsupportedclassversion
 
 # AZURE
 
+azure cloud shell
+
+az version
+
+az login
+
+kubectl version
+
 **Install NGINX on Azure Linux VM**
 
 sudo su
