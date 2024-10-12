@@ -138,6 +138,9 @@ HELM_REGISTRY_CONFIG="/Users/username/Library/Preferences/helm/registry.json"
 HELM_REPOSITORY_CACHE="/Users/username/Library/Caches/helm/repository"
 HELM_REPOSITORY_CONFIG="/Users/username/Library/Preferences/helm/repositories.yaml"
 
+# You can debug by using helm template to see the fully rendered template:
+helm template . --debug
+
 # LINUX
  sudo su >> sudo will give superprevilages to current user and su will switch user to root
  
