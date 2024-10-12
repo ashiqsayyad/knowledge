@@ -140,8 +140,11 @@ HELM_REPOSITORY_CONFIG="/Users/username/Library/Preferences/helm/repositories.ya
 
 # You can debug by using helm template to see the fully rendered template:
 helm template . --debug
+
 helm list -A
+
 helm install <my-release> . -n <ns>
+
 helm uninstall <my-release> . -n <ns>
 
 
