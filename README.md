@@ -140,6 +140,11 @@ HELM_REPOSITORY_CONFIG="/Users/username/Library/Preferences/helm/repositories.ya
 
 # You can debug by using helm template to see the fully rendered template:
 helm template . --debug
+helm list -A
+helm install <my-release> . -n <ns>
+helm uninstall <my-release> . -n <ns>
+
+
 
 # LINUX
  sudo su >> sudo will give superprevilages to current user and su will switch user to root
@@ -225,6 +230,8 @@ multinode-demo-m03
 type: Worker
 host: Running
 kubelet: Running
+
+# kubectl port-forward svc/url-shortner-ask-url-shortner 8080:8080 -n ask-url-shortner
 
 
 
