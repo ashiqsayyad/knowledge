@@ -279,5 +279,5 @@ Security and validation checks are enforced.
 kubectl get pods -n kube-system >> it will have one pod running for kube api-server 
 ![image](https://github.com/user-attachments/assets/a1e379c8-d7f8-49d9-93ff-b21e02ae1d3e)
 
-When u describe pod kubectl descrie pod kube-apiserver-multinode-demo -n kube-system then you will see etcd server ip  ** --etcd-servers=https://127.0.0.1:2379**
+When you describe pod:  kubectl describe pod kube-apiserver-multinode-demo -n kube-system >> then you will see etcd server ip  ** --etcd-servers=https://127.0.0.1:2379**
 
