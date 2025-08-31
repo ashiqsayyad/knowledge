@@ -1,6 +1,82 @@
 # Knowledge
 Useful links for tech and non tech
 
+**Observability**
+
+**Observability with Prometheus & Grafana on Minikube cluster in 12 Steps**
+
+1) Installations :: Install minikube & docker desktop on your machine
+2) Start docker destop
+3) Create minikube clutser :: minikube start --nodes 3 -p observability-demo-cluster --cni calico
+4) Prometheus Helm Installation :
+   
+   helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+   
+   helm search repo prometheus-community
+
+   helm repo update
+   
+   helm install prometheus prometheus-community/prometheus --namespace prometheus --create-namespace
+
+   Optional Step : If we get crashloopback error for prometheus server pod due to access denied on data dir access  "kubectl logs <prometheus-server-pod> -n prometheus -c prometheus-server"
+
+   helm upgrade prometheus prometheus-community/prometheus \
+     --namespace prometheus \
+     --set server.persistentVolume.enabled=false     // this will make PV as emptyDir
+  
+
+   Optional Step : If you restart minikube server and see prometheus pods in error then run
+   
+   kubectl rollout restart deployment -n prometheus
+6) Launch Prometheus server (UI)
+   
+      kubectl port-forward svc/prometheus-server -n prometheus 9090:80
+   
+      http://localhost:9090 in browser
+
+8) Run Sample PromQL queries
+   
+       count(kube_pod_info) by (namespace)    #this will retun number of pods per namespace
+10) Other Info Prometheus Server
+      http://localhost:9090/targets      # this will show targets which Prometheus server is scrapping
+   
+11) Grafana  Helm Installation :
+    
+      helm repo add grafana https://grafana.github.io/helm-charts
+   
+      helm search repo grafana
+   
+      helm repo update
+
+      helm install grafana grafana/grafana -n grafana --set persistence.enabled=false --set adminPassword='admin123' --create-namespace
+
+12) Launch Grafana
+    
+     kubectl port-forward -n grafana svc/grafana 3000:80
+    
+     http://localhost:3000/
+    
+14) Grafana & Prometheus server Integration
+    
+     Login to Grafana URL with admin/admin123 .   In Grafana UI → Left sidebar → ⚙️ Connections → Data Sources → Add data source
+    
+     In the URL field, enter your Prometheus service URL as http://prometheus-server.prometheus.svc.cluster.local → Click Save & Test → Should turn green ✅
+    
+12)Grafana : Import Dashboards
+
+      Go to + → Import Dashboard
+
+      Use these IDs (from Grafana.com):
+
+      6417 → Kubernetes Cluster Monitoring
+
+      315 → Node Exporter Full
+
+      3662 → Pods / Deployments
+
+      ✅ After this, you’ll be able to see pods, nodes, deployments metrics visually in Grafana.
+
+
 # JAVA
 Exception in thread "main" java.lang.UnsupportedClassVersionError: org/springframework/boot/SpringApplication has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 59.0
 
