@@ -3,7 +3,7 @@ Useful links for tech and non tech
 
 # Observability
 
-**Observability with Prometheus & Grafana on Minikube cluster in 12 Steps**
+**Observability with Prometheus & Grafana on Minikube cluster in 11 Easy Steps**
 
 1) Installations :: Install minikube & docker desktop on your machine
 2) Start docker destop
@@ -28,19 +28,19 @@ Useful links for tech and non tech
    Optional Step : If you restart minikube server and see prometheus pods in error then run
    
    kubectl rollout restart deployment -n prometheus
-6) Launch Prometheus server (UI)
+5) Launch Prometheus server (UI)
    
       kubectl port-forward svc/prometheus-server -n prometheus 9090:80
    
       http://localhost:9090 in browser
 
-8) Run Sample PromQL queries
+6) Run Sample PromQL queries
    
        count(kube_pod_info) by (namespace)    #this will retun number of pods per namespace
-10) Other Info Prometheus Server
+7) Other Info Prometheus Server
       http://localhost:9090/targets      # this will show targets which Prometheus server is scrapping
    
-11) Grafana  Helm Installation :
+8) Grafana  Helm Installation :
     
       helm repo add grafana https://grafana.github.io/helm-charts
    
@@ -50,19 +50,19 @@ Useful links for tech and non tech
 
       helm install grafana grafana/grafana -n grafana --set persistence.enabled=false --set adminPassword='admin123' --create-namespace
 
-12) Launch Grafana
+9) Launch Grafana
     
      kubectl port-forward -n grafana svc/grafana 3000:80
     
      http://localhost:3000/
     
-14) Grafana & Prometheus server Integration
+10) Grafana & Prometheus server Integration
     
      Login to Grafana URL with admin/admin123 .   In Grafana UI → Left sidebar → ⚙️ Connections → Data Sources → Add data source
     
      In the URL field, enter your Prometheus service URL as http://prometheus-server.prometheus.svc.cluster.local → Click Save & Test → Should turn green ✅
     
-12)Grafana : Import Dashboards
+11)Grafana : Import Dashboards
 
       Go to + → Import Dashboard
 
