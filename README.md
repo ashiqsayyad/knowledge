@@ -1,7 +1,7 @@
 # Knowledge
 Useful links for tech and non tech
 
-**Observability**
+# Observability
 
 **Observability with Prometheus & Grafana on Minikube cluster in 12 Steps**
 
